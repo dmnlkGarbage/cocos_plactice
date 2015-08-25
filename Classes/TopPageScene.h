@@ -13,7 +13,8 @@
 
 class TopPageLayer : public cocos2d::Layer
 {
-    
+ 
+    CREATE_FUNC(TopPageLayer);
 };
 
 
