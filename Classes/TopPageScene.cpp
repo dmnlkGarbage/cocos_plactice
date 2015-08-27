@@ -7,3 +7,9 @@
 //
 
 #include "TopPageScene.h"
+
+USING_NS_CC;
+
+bool TopPageLayer::init() {
+    return true;
+}
