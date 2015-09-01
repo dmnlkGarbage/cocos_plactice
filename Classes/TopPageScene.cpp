@@ -10,6 +10,10 @@
 
 USING_NS_CC;
 
+cocos2d::Scene* TopPageLayer::createScene() {
+
+}
+
 bool TopPageLayer::init() {
     
     if (!Layer::init()) {
@@ -21,5 +25,7 @@ bool TopPageLayer::init() {
     auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
     label->setPosition(Vec2(origin.x + visibleSize.width/2,
                             origin.y + visibleSize.height - label->getContentSize().height));
+    
+    this->addChild(label);
     return true;
 }
