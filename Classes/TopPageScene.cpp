@@ -11,7 +11,12 @@
 USING_NS_CC;
 
 cocos2d::Scene* TopPageLayer::createScene() {
-
+    auto scene = Scene::create();
+    auto layer = TopPageLayer::create();
+    
+    scene->addChild(layer);
+    
+    return scene;
 }
 
 bool TopPageLayer::init() {
