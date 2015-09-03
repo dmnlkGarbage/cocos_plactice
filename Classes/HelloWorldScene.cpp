@@ -1,5 +1,5 @@
 #include "HelloWorldScene.h"
-
+#include "TopPageScene.h"
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -78,9 +78,10 @@ bool HelloWorld::init()
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
-    Director::getInstance()->end();
-
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
+    Director::getInstance()->replaceScene(TopPageLayer::createScene());
+//    Director::getInstance()->end();
+//
+//#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+//    exit(0);
+//#endif
 }
