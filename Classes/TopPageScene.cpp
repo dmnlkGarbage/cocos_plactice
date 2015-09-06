@@ -27,10 +27,16 @@ bool TopPageLayer::init() {
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    auto label = Label::createWithTTF("日本語だよ", "fonts/arial.ttf", 24);
+    auto label = Label::createWithTTF("cant use japanese char", "fonts/arial.ttf", 24);
     label->setPosition(Vec2(origin.x + visibleSize.width/2,
                             origin.y + visibleSize.height - label->getContentSize().height));
-    
+  
     this->addChild(label);
+    Sprite* sprite = Sprite::create("avater.jpg");
+    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+
+    this->addChild(sprite);
+    
+
     return true;
 }

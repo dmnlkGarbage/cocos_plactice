@@ -70,6 +70,7 @@
 		EDD7E3241B58AE00009F9DEB /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD7E3231B58AE00009F9DEB /* libiconv.dylib */; };
 		EDD7E3261B58AE07009F9DEB /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD7E3251B58AE07009F9DEB /* libiconv.dylib */; };
 		F42217CD1B8CD2E400C927B9 /* TopPageScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F42217CB1B8CD2E400C927B9 /* TopPageScene.cpp */; };
+		F4EAA35A1B9C94E80015DB93 /* avater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4EAA3591B9C94E80015DB93 /* avater.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		EDD7E3251B58AE07009F9DEB /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		F42217CB1B8CD2E400C927B9 /* TopPageScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TopPageScene.cpp; sourceTree = "<group>"; };
 		F42217CC1B8CD2E400C927B9 /* TopPageScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPageScene.h; sourceTree = "<group>"; };
+		F4EAA3591B9C94E80015DB93 /* avater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avater.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
+				F4EAA3591B9C94E80015DB93 /* avater.jpg */,
 				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
 			);
 			name = Resources;
@@ -479,6 +482,7 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				F4EAA35A1B9C94E80015DB93 /* avater.jpg in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
