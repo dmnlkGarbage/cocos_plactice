@@ -34,7 +34,9 @@ bool TopPageLayer::init() {
     this->addChild(label);
     Sprite* sprite = Sprite::create("avater.jpg");
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
+    sprite->setFlippedX(true);
+    
+    
     this->addChild(sprite);
     
 
