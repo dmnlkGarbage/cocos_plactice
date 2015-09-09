@@ -17,6 +17,8 @@ public:
     static cocos2d::Scene* createScene();
     virtual bool init();
     CREATE_FUNC(TopPageLayer);
+    void buttonCallback(cocos2d::Ref* pSender);
+    Sprite* avatar;
 };
 
 
