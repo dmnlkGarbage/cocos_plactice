@@ -33,6 +33,7 @@ bool TopPageLayer::init() {
   
     this->addChild(label);
     Sprite* sprite = Sprite::create("avater.jpg");
+    sprite->setName("avatar");
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     sprite->setFlippedX(true);
     
@@ -58,5 +59,12 @@ bool TopPageLayer::init() {
 
 void TopPageLayer::buttonCallback(Ref* pSender)
 {
-    CCLOG("test");
+    auto sprite = dynamic_cast<Sprite*>(this->getChildByName("avatar"));
+    if (sprite) {
+        if (sprite->isFlippedX()) {
+            sprite->setFlippedX(false);
+        } else {
+            sprite->setFlippedX(true);
+        }
+    }
 }
