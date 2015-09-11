@@ -66,5 +66,6 @@ void TopPageLayer::buttonCallback(Ref* pSender)
         } else {
             sprite->setFlippedX(true);
         }
+        sprite->setScale(sprite->getScale()*2);
     }
 }
