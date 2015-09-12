@@ -48,10 +48,24 @@ bool TopPageLayer::init() {
     
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
+    
+    auto moveItem = MenuItemImage::create(
+                                           "CloseNormal.png",
+                                           "CloseSelected.png",
+                                           CC_CALLBACK_1(TopPageLayer::moveButtonCallback, this));
+
+    moveItem->setPosition(Vec2(100,200));
+    
+    
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
+    menu->addChild(moveItem);
+    
+//    auto menu2 = Menu::create(moveItem, NULL);
+//    menu2->setPosition(Vec2::ZERO);
+    
     this->addChild(menu, 1);
-
+  //  this->addChild(menu2,2);
 
     return true;
 }
@@ -69,3 +83,8 @@ void TopPageLayer::buttonCallback(Ref* pSender)
         sprite->setScale(sprite->getScale()*1.1f);
     }
 }
+
+void TopPageLayer::moveButtonCallback(cocos2d::Ref *pSender) {
+    CCLOG("move");
+};
+
