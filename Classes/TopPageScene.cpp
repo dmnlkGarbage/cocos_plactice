@@ -64,11 +64,18 @@ bool TopPageLayer::init() {
                                          CC_CALLBACK_1(TopPageLayer::addImageSpriteButtonCallback, this));
     addItem->setPosition(Vec2(200,200));
 
+    auto removeItem = MenuItemImage::create(
+                                         "CloseNormal.png",
+                                         "CloseSelected.png",
+                                         CC_CALLBACK_1(TopPageLayer::removeAllSprite, this));
+    removeItem->setPosition(Vec2(200,300));
+    
     
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
     menu->addChild(moveItem);
     menu->addChild(addItem);
+    menu->addChild(removeItem);
 
     
     this->addChild(menu, 1);
@@ -116,5 +123,8 @@ void TopPageLayer::addImageSpriteButtonCallback(cocos2d::Ref *pSender) {
         sprite->setPosition(Vec2(posX(mt), posY(mt)));
         this->addChild(sprite);
     }
+}
 
+void TopPageLayer::removeAllSprite(cocos2d::Ref *pSender) {
+    CCLOG("removeItem");
 }
