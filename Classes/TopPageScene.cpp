@@ -85,6 +85,9 @@ void TopPageLayer::buttonCallback(Ref* pSender)
 }
 
 void TopPageLayer::moveButtonCallback(cocos2d::Ref *pSender) {
-    CCLOG("move");
+    auto sprite = dynamic_cast<Sprite*>(this->getChildByName("avatar"));
+    if (sprite) {
+        sprite->setPosition(Vec2(sprite->getPosition().x +10, sprite->getPosition().y));
+    }
 };
 
