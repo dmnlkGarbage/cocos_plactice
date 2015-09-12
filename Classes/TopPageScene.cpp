@@ -7,6 +7,7 @@
 //
 
 #include "TopPageScene.h"
+#include <random>
 
 USING_NS_CC;
 
@@ -103,7 +104,14 @@ void TopPageLayer::moveButtonCallback(cocos2d::Ref *pSender) {
 
 void TopPageLayer::addImageSpriteButtonCallback(cocos2d::Ref *pSender) {
     CCLOG("add Sprite");
-    auto sprite = Sprite::create("avater.jpg");
+    std::random_device rd;
+    std::mt19937 mt(rd());
     
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    std::uniform_real_distribution<float> posX(0, visibleSize.width);
+    std::uniform_real_distribution<float> posY(0, visibleSize.height);
+    
+    auto sprite = Sprite::create("avater.jpg");
+    sprite->setPosition(Vec2(posX(mt), posY(mt)));
     this->addChild(sprite);
 }
