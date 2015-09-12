@@ -111,7 +111,10 @@ void TopPageLayer::addImageSpriteButtonCallback(cocos2d::Ref *pSender) {
     std::uniform_real_distribution<float> posX(0, visibleSize.width);
     std::uniform_real_distribution<float> posY(0, visibleSize.height);
     
-    auto sprite = Sprite::create("avater.jpg");
-    sprite->setPosition(Vec2(posX(mt), posY(mt)));
-    this->addChild(sprite);
+    for (int i =0; i < 10; i++) {
+        auto sprite = Sprite::create("avater.jpg");
+        sprite->setPosition(Vec2(posX(mt), posY(mt)));
+        this->addChild(sprite);
+    }
+
 }
