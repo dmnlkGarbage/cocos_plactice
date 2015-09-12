@@ -68,7 +68,7 @@ bool TopPageLayer::init() {
                                          "CloseNormal.png",
                                          "CloseSelected.png",
                                          CC_CALLBACK_1(TopPageLayer::removeAllSprite, this));
-    removeItem->setPosition(Vec2(200,300));
+    removeItem->setPosition(Vec2(250,200));
     
     
     auto menu = Menu::create(closeItem, NULL);
@@ -118,7 +118,7 @@ void TopPageLayer::addImageSpriteButtonCallback(cocos2d::Ref *pSender) {
     std::uniform_real_distribution<float> posX(0, visibleSize.width);
     std::uniform_real_distribution<float> posY(0, visibleSize.height);
     
-    for (int i =0; i < 10; i++) {
+    for (int i =0; i < 10000; i++) {
         auto sprite = Sprite::create("avater.jpg");
         sprite->setPosition(Vec2(posX(mt), posY(mt)));
         this->addChild(sprite);
@@ -127,4 +127,13 @@ void TopPageLayer::addImageSpriteButtonCallback(cocos2d::Ref *pSender) {
 
 void TopPageLayer::removeAllSprite(cocos2d::Ref *pSender) {
     CCLOG("removeItem");
+    auto children =  this->getChildren();
+    for (auto child: children) {
+        Sprite* sprite = dynamic_cast<Sprite*>(child);
+        if (sprite) {
+            this->removeChild(sprite);
+        }
+    }
+    
+    
 }
