@@ -52,7 +52,6 @@ bool TopPageLayer::init() {
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
 
-    
 
     return true;
 }
@@ -66,6 +65,7 @@ void TopPageLayer::buttonCallback(Ref* pSender)
         } else {
             sprite->setFlippedX(true);
         }
-        sprite->setScale(sprite->getScale()*2);
+        
+        sprite->setScale(sprite->getScale()*1.1f);
     }
 }
