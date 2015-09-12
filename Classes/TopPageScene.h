@@ -21,7 +21,9 @@ public:
     CREATE_FUNC(TopPageLayer);
     void buttonCallback(cocos2d::Ref* pSender);
     void moveButtonCallback(cocos2d::Ref* pSender);
+    void addImageSpriteButtonCallback(cocos2d::Ref* pSender);
     Sprite* avatar;
+
 };
 
 
