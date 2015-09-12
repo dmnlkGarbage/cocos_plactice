@@ -89,5 +89,8 @@ void TopPageLayer::moveButtonCallback(cocos2d::Ref *pSender) {
     if (sprite) {
         sprite->setPosition(Vec2(sprite->getPosition().x +10, sprite->getPosition().y));
     }
+    
+    CCLOG("getPositionX=%f", sprite->getPositionX());
+    CCLOG("getPosition.x=%f", sprite->getPosition().x);
 };
 
