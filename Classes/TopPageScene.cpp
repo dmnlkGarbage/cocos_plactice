@@ -70,13 +70,18 @@ bool TopPageLayer::init() {
                                          CC_CALLBACK_1(TopPageLayer::removeAllSprite, this));
     removeItem->setPosition(Vec2(250,200));
     
+    auto animItem = MenuItemImage::create(
+                                            "CloseNormal.png",
+                                            "CloseSelected.png",
+                                            CC_CALLBACK_1(TopPageLayer::animationSprite, this));
+    animItem->setPosition(Vec2(250,200));
     
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
     menu->addChild(moveItem);
     menu->addChild(addItem);
     menu->addChild(removeItem);
-
+    menu->addChild(animItem);
     
     this->addChild(menu, 1);
 
@@ -134,6 +139,14 @@ void TopPageLayer::removeAllSprite(cocos2d::Ref *pSender) {
             this->removeChild(sprite);
         }
     }
-    
-    
+}
+
+void TopPageLayer::animationSprite(cocos2d::Ref *pSender) {
+    CCLOG("start animation");
+    auto sprite = dynamic_cast<Sprite*>(this->getChildByName("avatar"));
+    if (sprite) {
+        Size visibleSize = Director::getInstance()->getVisibleSize();
+        auto anim = MoveTo::create(1, Vec2(visibleSize.width-sprite->getContentSize().width/2, visibleSize.height/2));
+        sprite->runAction(anim);
+    }
 }
