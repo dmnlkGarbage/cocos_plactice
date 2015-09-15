@@ -146,7 +146,7 @@ void TopPageLayer::animationSprite(cocos2d::Ref *pSender) {
     auto sprite = dynamic_cast<Sprite*>(this->getChildByName("avatar"));
     if (sprite) {
         Size visibleSize = Director::getInstance()->getVisibleSize();
-        auto anim = MoveTo::create(1, Vec2(visibleSize.width-sprite->getContentSize().width/2, visibleSize.height/2));
+        auto anim = MoveTo::create(1, Vec2(visibleSize.width-sprite->getContentSize().width/2, visibleSize.height/3));
         sprite->runAction(anim);
     }
 }
