@@ -39,6 +39,10 @@ bool TopPageLayer::init() {
     sprite->setFlippedX(true);
     
     
+    Sprite* cover = Sprite::create("CloseNormal.png");
+    sprite->addChild(cover);
+    
+    
     this->addChild(sprite);
     
     
