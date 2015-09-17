@@ -41,10 +41,12 @@ bool TopPageLayer::init() {
     
     Sprite* cover = Sprite::create("CloseNormal.png");
     sprite->addChild(cover);
-    
+    CCLOG("before local zorder=%d", sprite->getLocalZOrder());
+    CCLOG("before global Zorder=%f", sprite->getGlobalZOrder());
     
     this->addChild(sprite);
-    
+    CCLOG("after local zorder=%d", sprite->getLocalZOrder());
+    CCLOG("after global Zorder=%f", sprite->getGlobalZOrder());
     
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
