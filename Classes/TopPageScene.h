@@ -24,6 +24,7 @@ public:
     void addImageSpriteButtonCallback(cocos2d::Ref* pSender);
     void removeAllSprite(cocos2d::Ref* pSender);
     void animationSprite(cocos2d::Ref* pSender);
+private:
     Sprite* avatar;
 
 };
