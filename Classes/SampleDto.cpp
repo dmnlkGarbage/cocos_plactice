@@ -2,7 +2,7 @@
 //  SampleDto.cpp
 //  SampleCocos
 //
-//  Created by 川口将貴 on 2015/09/22.
+//  Created by dmnlk on 2015/09/22.
 //
 //
 
