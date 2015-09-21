@@ -105,7 +105,8 @@ bool TopPageLayer::init() {
 
     
     SampleDto* dtoPointer = &dto;
-    dtoPointer->load();
+    dtoLoadData =  dtoPointer->load();
+    CCLOG("load data is %d", dtoLoadData);
     
     return true;
 }

@@ -10,7 +10,7 @@
 #include <iostream>
 
 using std::cout;
-SampleDto::SampleDto() {
+SampleDto::SampleDto():count(0) {
     cout <<  "sampledto const\n";
 }
 
@@ -20,5 +20,6 @@ SampleDto::~SampleDto() {
 
 int SampleDto::load() {
     cout << "loading\n";
-    return 10;
+    count++;
+    return count;
 }

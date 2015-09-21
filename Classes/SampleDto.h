@@ -16,6 +16,9 @@ public:
     virtual ~SampleDto() ;
     
 public:
+    int count;
+    
+public:
     int load();
 };
 
