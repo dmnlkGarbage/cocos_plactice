@@ -9,6 +9,9 @@
 #ifndef __SampleCocos__SampleDto__
 #define __SampleCocos__SampleDto__
 
-#include <stdio.h>
+class SampleDto
+{
+    
+};
 
 #endif /* defined(__SampleCocos__SampleDto__) */
