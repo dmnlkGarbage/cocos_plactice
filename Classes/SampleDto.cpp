@@ -11,9 +11,14 @@
 
 using std::cout;
 SampleDto::SampleDto() {
-    cout <<  "sampledto const";
+    cout <<  "sampledto const\n";
 }
 
 SampleDto::~SampleDto() {
-    cout << "sample dto dest";
+    cout << "sample dto dest\n";
+}
+
+int SampleDto::load() {
+    cout << "loading\n";
+    return 10;
 }

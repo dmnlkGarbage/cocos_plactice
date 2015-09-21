@@ -9,6 +9,7 @@
 #include "TopPageScene.h"
 #include <random>
 #include "SimpleAudioEngine.h"
+#include "SampleDto.h"
 
 USING_NS_CC;
 
@@ -97,6 +98,14 @@ bool TopPageLayer::init() {
     //bgm
     CocosDenshion::SimpleAudioEngine::getInstance()->preloadBackgroundMusic("bgm.mp3");
     CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("bgm.mp3");
+    
+    SampleDto dto;
+    int dtoLoadData = dto.load();
+    CCLOG("load data is %d", dtoLoadData);
+
+    
+    SampleDto* dtoPointer = &dto;
+    dtoPointer->load();
     
     return true;
 }

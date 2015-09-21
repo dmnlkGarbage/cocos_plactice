@@ -14,6 +14,9 @@ class SampleDto
 public:
     SampleDto();
     virtual ~SampleDto() ;
+    
+public:
+    int load();
 };
 
 #endif /* defined(__SampleCocos__SampleDto__) */
