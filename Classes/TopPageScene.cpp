@@ -8,8 +8,10 @@
 
 #include "TopPageScene.h"
 #include <random>
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
+
 
 cocos2d::Scene* TopPageLayer::createScene() {
     auto scene = Scene::create();
@@ -92,6 +94,10 @@ bool TopPageLayer::init() {
     this->addChild(menu, 1);
 
 
+    //bgm
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadBackgroundMusic("bgm.mp3");
+    CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("bgm.mp3");
+    
     return true;
 }
 
