@@ -7,3 +7,13 @@
 //
 
 #include "SampleDto.h"
+#include <iostream>
+
+using std::cout;
+SampleDto::SampleDto() {
+    cout <<  "sampledto const";
+}
+
+SampleDto::~SampleDto() {
+    cout << "sample dto dest";
+}

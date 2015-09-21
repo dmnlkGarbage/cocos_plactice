@@ -11,7 +11,9 @@
 
 class SampleDto
 {
-    
+public:
+    SampleDto();
+    virtual ~SampleDto() ;
 };
 
 #endif /* defined(__SampleCocos__SampleDto__) */
