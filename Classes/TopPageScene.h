@@ -10,6 +10,7 @@
 #define __SampleCocos__TopPageScene__
 
 #include <cocos2d.h>
+#include <SampleDto.h>
 
 USING_NS_CC;
 
@@ -24,6 +25,9 @@ public:
     void addImageSpriteButtonCallback(cocos2d::Ref* pSender);
     void removeAllSprite(cocos2d::Ref* pSender);
     void animationSprite(cocos2d::Ref* pSender);
+    void passDto(SampleDto dto);
+    void PassDtoPointer(SampleDto* dto);
+    
 private:
     Sprite* avatar;
 

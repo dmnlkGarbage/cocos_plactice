@@ -85,12 +85,15 @@ bool TopPageLayer::init() {
                                             CC_CALLBACK_1(TopPageLayer::animationSprite, this));
     animItem->setPosition(Vec2(250,200));
     
+    
+    
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
     menu->addChild(moveItem);
     menu->addChild(addItem);
     menu->addChild(removeItem);
     menu->addChild(animItem);
+
     
     this->addChild(menu, 1);
 
@@ -108,6 +111,11 @@ bool TopPageLayer::init() {
     dtoLoadData =  dtoPointer->load();
     CCLOG("load data is %d", dtoLoadData);
     
+    this->passDto(dto);
+    this->passDto(dto);
+    this->passDto(dto);
+    this->PassDtoPointer(dtoPointer);
+    this->PassDtoPointer(dtoPointer);
     return true;
 }
 
@@ -171,4 +179,16 @@ void TopPageLayer::animationSprite(cocos2d::Ref *pSender) {
         auto anim = MoveTo::create(1, Vec2(visibleSize.width-sprite->getContentSize().width/2, visibleSize.height/3));
         sprite->runAction(anim);
     }
+}
+
+void TopPageLayer::passDto(SampleDto dto) {
+    CCLOG("dto passed");
+    int data = dto.load();
+    CCLOG("dto counter is %d", data);
+}
+
+void TopPageLayer::PassDtoPointer(SampleDto *dto) {
+    CCLOG("dto pointer passed");
+    int data = dto->load();
+    CCLOG("dto pointer counter is %d", data);
 }
