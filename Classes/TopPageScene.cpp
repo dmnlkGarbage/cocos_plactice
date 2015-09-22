@@ -116,7 +116,8 @@ bool TopPageLayer::init() {
     this->passDto(dto);
     this->PassDtoPointer(dtoPointer);
     this->PassDtoPointer(dtoPointer);
-    dtoPointer = nullptr;
+    mDto = &dto;
+    mDto->load();
 
     CCLOG("load data is sss %d", dto.count);
     return true;
