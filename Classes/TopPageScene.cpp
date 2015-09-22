@@ -77,7 +77,7 @@ bool TopPageLayer::init() {
                                          "CloseNormal.png",
                                          "CloseSelected.png",
                                          CC_CALLBACK_1(TopPageLayer::removeAllSprite, this));
-    removeItem->setPosition(Vec2(250,200));
+    removeItem->setPosition(Vec2(250,230));
     
     auto animItem = MenuItemImage::create(
                                             "CloseNormal.png",
@@ -116,6 +116,9 @@ bool TopPageLayer::init() {
     this->passDto(dto);
     this->PassDtoPointer(dtoPointer);
     this->PassDtoPointer(dtoPointer);
+    dtoPointer = nullptr;
+
+    CCLOG("load data is sss %d", dto.count);
     return true;
 }
 
