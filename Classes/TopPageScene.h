@@ -17,6 +17,9 @@ USING_NS_CC;
 class TopPageLayer : public cocos2d::Layer
 {
 public:
+    TopPageLayer();
+    virtual ~TopPageLayer();
+    
     static cocos2d::Scene* createScene();
     virtual bool init();
     CREATE_FUNC(TopPageLayer);
