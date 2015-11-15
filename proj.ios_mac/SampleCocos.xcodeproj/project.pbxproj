@@ -70,6 +70,7 @@
 		EDD7E3241B58AE00009F9DEB /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD7E3231B58AE00009F9DEB /* libiconv.dylib */; };
 		EDD7E3261B58AE07009F9DEB /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD7E3251B58AE07009F9DEB /* libiconv.dylib */; };
 		F41FF1E01BB04B8500D71572 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F41FF1DF1BB04B8500D71572 /* bgm.mp3 */; };
+		F461B73F1BF8D69800B2AE34 /* SampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F461B73D1BF8D69800B2AE34 /* SampleScene.cpp */; };
 		F4EAA35A1B9C94E80015DB93 /* avater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4EAA3591B9C94E80015DB93 /* avater.jpg */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,8 @@
 		EDD7E3231B58AE00009F9DEB /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		EDD7E3251B58AE07009F9DEB /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		F41FF1DF1BB04B8500D71572 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
+		F461B73D1BF8D69800B2AE34 /* SampleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleScene.cpp; sourceTree = "<group>"; };
+		F461B73E1BF8D69800B2AE34 /* SampleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SampleScene.hpp; sourceTree = "<group>"; };
 		F4EAA3591B9C94E80015DB93 /* avater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avater.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,6 +310,8 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				F461B73D1BF8D69800B2AE34 /* SampleScene.cpp */,
+				F461B73E1BF8D69800B2AE34 /* SampleScene.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -507,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F461B73F1BF8D69800B2AE34 /* SampleScene.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
