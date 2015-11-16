@@ -6,9 +6,14 @@
 //
 //
 
+
 #ifndef SampleScene_hpp
 #define SampleScene_hpp
 
-#include <stdio.h>
+#include "cocos2d.h"
+
+class SampleScene :public cocos2d::Layer {
+    CREATE_FUNC(SampleScene);
+};
 
 #endif /* SampleScene_hpp */
