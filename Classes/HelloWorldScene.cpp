@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "SampleScene.hpp"
 
 USING_NS_CC;
 
@@ -78,6 +79,7 @@ bool HelloWorld::init()
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
+    Director::getInstance()->replaceScene(SampleScene::createScene());
  //   Director::getInstance()->replaceScene(TopPageLayer::createScene());
 //    Director::getInstance()->end();
 //

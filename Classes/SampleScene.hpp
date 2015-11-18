@@ -13,6 +13,7 @@
 #include "cocos2d.h"
 
 class SampleScene :public cocos2d::Layer {
+public:
     static cocos2d::Scene* createScene();
 
     CREATE_FUNC(SampleScene);
