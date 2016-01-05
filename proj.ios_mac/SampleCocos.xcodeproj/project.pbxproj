@@ -71,6 +71,7 @@
 		EDD7E3261B58AE07009F9DEB /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD7E3251B58AE07009F9DEB /* libiconv.dylib */; };
 		F41FF1E01BB04B8500D71572 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F41FF1DF1BB04B8500D71572 /* bgm.mp3 */; };
 		F461B73F1BF8D69800B2AE34 /* SampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F461B73D1BF8D69800B2AE34 /* SampleScene.cpp */; };
+		F48C24901C3C1A0A0094C826 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F48C248F1C3C1A0A0094C826 /* bg.png */; };
 		F4EAA35A1B9C94E80015DB93 /* avater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4EAA3591B9C94E80015DB93 /* avater.jpg */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +170,7 @@
 		F41FF1DF1BB04B8500D71572 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
 		F461B73D1BF8D69800B2AE34 /* SampleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleScene.cpp; sourceTree = "<group>"; };
 		F461B73E1BF8D69800B2AE34 /* SampleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SampleScene.hpp; sourceTree = "<group>"; };
+		F48C248F1C3C1A0A0094C826 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = res/bg.png; sourceTree = "<group>"; };
 		F4EAA3591B9C94E80015DB93 /* avater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avater.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				F41FF1DF1BB04B8500D71572 /* bgm.mp3 */,
+				F48C248F1C3C1A0A0094C826 /* bg.png */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
@@ -464,6 +467,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48C24901C3C1A0A0094C826 /* bg.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
