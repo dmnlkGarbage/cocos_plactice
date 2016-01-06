@@ -16,17 +16,17 @@ USING_NS_CC;
 using namespace ui;
 //USING_NS_CC_EXT;
 
-class SampleScene :public cocos2d::Layer, public ui::EditBoxDelegate {
+class SampleScene :public cocos2d::Layer, public cocos2d::extension::EditBoxDelegate {
 public:
     static cocos2d::Scene* createScene();
     virtual bool init();
 
     CREATE_FUNC(SampleScene);
 private:
-    virtual void editBoxEditingDidBegin(EditBox *editBox);
-    virtual void editBoxEditingDidEnd(EditBox *editBox);
-    virtual void editBoxTextChanged(EditBox *editBox, const std::string& text);
-    virtual void editBoxReturn(EditBox *editBox);
+    virtual void editBoxEditingDidBegin(cocos2d::extension::EditBox *editBox);
+    virtual void editBoxEditingDidEnd(cocos2d::extension::EditBox *editBox);
+    virtual void editBoxTextChanged(cocos2d::extension::EditBox *editBox, const std::string& text);
+    virtual void editBoxReturn(cocos2d::extension::EditBox *editBox);
 };
 
 #endif /* SampleScene_hpp */
