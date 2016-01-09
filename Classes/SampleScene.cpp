@@ -82,6 +82,7 @@ bool SampleScene::init()
 ///    cocos2d::extension::EditBox* editbox  = EditBox::cre
     
     auto editBox = cocos2d::extension::EditBox::create(Size(100, 50), cocos2d::extension::Scale9Sprite::create("bg.png"));
+    editBox->setInputMode(cocos2d::extension::EditBox::InputMode::ANY);
     editBox->setFont("fonts/Marker Felt.ttf", 12.0f);
     editBox->setPlaceHolder("ここに入力してください");
     editBox->setPlaceholderFontColor(Color3B::BLACK);
@@ -103,6 +104,7 @@ void SampleScene::editBoxEditingDidEnd(cocos2d::extension::EditBox *editBox) {
 }
 
 void SampleScene::editBoxTextChanged(cocos2d::extension::EditBox *editBox, const std::string& text) {
+    CCLOG(editBox->getText());
 }
 
 void SampleScene::editBoxReturn(cocos2d::extension::EditBox *editBox) {
