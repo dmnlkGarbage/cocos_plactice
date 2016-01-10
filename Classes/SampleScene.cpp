@@ -81,31 +81,32 @@ bool SampleScene::init()
     
 ///    cocos2d::extension::EditBox* editbox  = EditBox::cre
 
-    auto editBox = cocos2d::extension::EditBox::create(Size(100, 50), cocos2d::extension::Scale9Sprite::create("bg.png"));
-    editBox->setInputMode(cocos2d::extension::EditBox::InputMode::ANY);
-    editBox->setFont("fonts/Marker Felt.ttf", 12.0f);
+    auto editBox = cocos2d::ui::EditBox::create(Size(300, 100), cocos2d::ui::Scale9Sprite::create("bg.png"));
+    editBox->setInputMode(cocos2d::ui::EditBox::InputMode::ANY);
+    editBox->setFont("fonts/Marker Felt.ttf", 10.0f);
+    editBox->setPlaceholderFontSize(10.0f);
     editBox->setPlaceHolder("ここに入力してください");
     editBox->setPlaceholderFontColor(Color3B::BLACK);
     editBox->setFontColor(Color3B::BLACK);
     editBox->setMaxLength(100);
-    editBox->setText("初期設定文字\ntest");
-    editBox->setReturnType(cocos2d::extension::EditBox::KeyboardReturnType::DONE);
-    editBox->setInputMode(cocos2d::extension::EditBox::InputMode::ANY);
-    editBox->cocos2d::Node::setPosition(100, 200);
+   // editBox->setText("初期設定文字");
+    //editBox->setReturnType(cocos2d::ui::EditBox::KeyboardReturnType::DONE);
+    editBox->setInputMode(cocos2d::ui::EditBox::InputMode::ANY);
+    editBox->cocos2d::Node::setPosition(150, 200);
     editBox->setDelegate(this);
     this->addChild(editBox);
     return true;
 }
 
-void SampleScene::editBoxEditingDidBegin(cocos2d::extension::EditBox *editBox) {
+void SampleScene::editBoxEditingDidBegin(cocos2d::ui::EditBox *editBox) {
 }
 
-void SampleScene::editBoxEditingDidEnd(cocos2d::extension::EditBox *editBox) {
+void SampleScene::editBoxEditingDidEnd(cocos2d::ui::EditBox *editBox) {
 }
 
-void SampleScene::editBoxTextChanged(cocos2d::extension::EditBox *editBox, const std::string& text) {
+void SampleScene::editBoxTextChanged(cocos2d::ui::EditBox *editBox, const std::string& text) {
     CCLOG(editBox->getText());
 }
 
-void SampleScene::editBoxReturn(cocos2d::extension::EditBox *editBox) {
+void SampleScene::editBoxReturn(cocos2d::ui::EditBox *editBox) {
 }
