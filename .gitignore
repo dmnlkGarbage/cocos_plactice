@@ -49,3 +49,6 @@ out/
 *.tgz
 *.gtgz
 *.zip
+
+
+*.xcuserstate
