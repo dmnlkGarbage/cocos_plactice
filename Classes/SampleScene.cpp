@@ -69,17 +69,6 @@ bool SampleScene::init()
     // add the label as a child to this layer
     this->addChild(label, 1);
     
-    // add "HelloWorld" splash screen"
-//    auto sprite = Sprite::create("HelloWorld.png");
-//    
-//    // position the sprite on the center of the screen
-//    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-//    
-//    // add the sprite as a child to this layer
-//    this->addChild(sprite, 0);
-    
-    
-///    cocos2d::extension::EditBox* editbox  = EditBox::cre
 
     auto editBox = cocos2d::ui::EditBox::create(Size(300, 100), cocos2d::ui::Scale9Sprite::create("bg.png"));
     editBox->setInputMode(cocos2d::ui::EditBox::InputMode::ANY);
