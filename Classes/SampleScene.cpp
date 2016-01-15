@@ -70,7 +70,6 @@ void SampleScene::editBoxEditingDidEnd(cocos2d::ui::EditBox *editBox) {
 }
 
 void SampleScene::editBoxTextChanged(cocos2d::ui::EditBox *editBox, const std::string& text) {
-    CCLOG(editBox->getText());
 }
 
 void SampleScene::editBoxReturn(cocos2d::ui::EditBox *editBox) {
