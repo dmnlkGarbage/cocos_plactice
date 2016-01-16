@@ -55,7 +55,6 @@ bool SampleScene::init()
     editBox->setPlaceholderFontColor(Color3B::BLACK);
     editBox->setFontColor(Color3B::BLACK);
     editBox->setMaxLength(100);
-   // editBox->setText("初期設定文字");
     editBox->setInputMode(cocos2d::ui::EditBox::InputMode::ANY);
     editBox->cocos2d::Node::setPosition(150, 200);
     editBox->setDelegate(this);
